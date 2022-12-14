@@ -4,7 +4,7 @@ select * from login_logs;
 select * from sales_orders;
 select * from sales_orders_items;
 
----1. Make a dataset (Using SQL) named ìdaily_loginsî which contains the number of logins on a daily basis.
+---1. Make a dataset (Using SQL) named ‚Äúdaily_logins‚Äù which contains the number of logins on a daily basis.
 	--SELECT * INTO daily_logins FROM (Select cast(login_time as date) as 'Date', count(login_log_id) as total_logins from login_logs 
 	--group by cast(login_time as date))Q;
 
@@ -148,6 +148,3 @@ select * from sales_orders_items;
 	Select l.Date, total_logins as Number_of_Logins, Number_of_Orders 
 	from Logins as l join Orders as o on l.Date=o.Date
 	order by l.Date;
-
----8. Give at least 2 insights that are not mentioned above and 
---are not clearly visible from the data.
